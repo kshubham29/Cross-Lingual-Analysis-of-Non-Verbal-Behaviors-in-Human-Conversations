@@ -1,0 +1,4 @@
+model,cv_ccc,cv_std,median_session_ccc
+training mean,0.0,0.0,0.0
+"session mean (uses test labels, reference)",0.1047404918453138,0.06946683437489228,0.0
+"persistence: previous second (uses labels, reference)",0.9683843369522357,0.0021080206004476434,0.9649539221655606

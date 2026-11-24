@@ -1,0 +1,4 @@
+language_a,language_b,spearman_all_797,top20_overlap
+English,French,0.8879129836959754,14
+English,German,0.8964067406445925,16
+French,German,0.9447933408344265,16
