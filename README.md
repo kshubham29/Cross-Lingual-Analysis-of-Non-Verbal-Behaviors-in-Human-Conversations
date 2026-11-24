@@ -1,6 +1,6 @@
 # Cross-Lingual Prediction of Engagement from Non-Verbal Behaviour (NoXi)
 
-Student project (Deep Learning), Shubham Kumar, 23CSU388, CSE, The NorthCap University. Supervisor: Prof. Poonam Chaudhary.
+Student project (Deep Learning), Shubham Kumar, 23CSU388, CSE, The NorthCap University. Supervisor: Dr. Poonam Chaudhary.
 
 **Question.** Can a computer estimate, every second, how engaged a person is in a conversation using only the voice and the face (not the words)? How well does this work for people it has never seen, what is lost when the language changes (English, French, German), and which signal, voice or face, carries over better?
 
@@ -34,13 +34,13 @@ Student project (Deep Learning), Shubham Kumar, 23CSU388, CSE, The NorthCap Univ
 | Dense head on w2v-BERT 2.0 + VideoMAE | 0.676 |
 | **Dense head on w2v-BERT 2.0 + VideoMAE + context** | **0.767 +- 0.017** (0.733 on a new language) |
 
-Other findings: a random split overstates the score (about 0.89 against 0.63); voice (0.654) is much stronger than face (0.361); a new language costs only about 0.04 CCC; past context gives the biggest gain. Limits: 24 of 72 conversations, language and recording site cannot be separated, and a role-only baseline already reaches 0.434.
+Other findings: a random split overstates the score (about 0.89 against 0.63); voice (0.654) is much stronger than face (0.361); a new language costs only about 0.04 CCC; past context gives the biggest gain. An extra model, a Transformer on the frozen pretrained embeddings (5 seeds), reaches 0.752 +- 0.019 on new people, not significantly different from the dense head with context (paired test p = 0.16), and 0.679 on a new language. Limits: 24 of 72 conversations, language and recording site cannot be separated, and a role-only baseline already reaches 0.434.
 
 ## Repository layout
 | Folder / file | Content |
 |---|---|
 | `notebooks/` | 19 notebooks (each starts with an "In short" cell). 01-13 are the development steps; **18, 28-35 are the final results and only load saved tables** |
-| `src/` | the scripts behind the notebooks; final models in `29_final_models.py`, extra analyses in `30`-`35` |
+| `src/` | the scripts behind the notebooks; final models in `29_final_models.py`, extra analyses in `30`-`35`, extra Transformer model in `36`-`37` |
 | `tools/data24/` | scripts that built the 24-conversation feature tables from the raw NoXi files (needs the data) |
 | `reports/` | all result tables (`*.csv`) and charts |
 | `charts/` | saved pictures used by notebooks 33 and 35 |
