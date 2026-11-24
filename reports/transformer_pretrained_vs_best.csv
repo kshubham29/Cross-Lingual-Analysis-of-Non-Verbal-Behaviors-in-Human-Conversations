@@ -1,0 +1,2 @@
+comparison,sessions,mean_diff,ci_low,ci_high,transformer_better,p_wilcoxon
+Transformer on pretrained embeddings minus dense head + context (per-session CCC; Transformer = mean of seeds 2-5),24,-0.018157026841086384,-0.04111531903138113,0.0029679897037453115,11/24,0.15998530387878418
